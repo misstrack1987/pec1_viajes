@@ -1,0 +1,24 @@
+
+body {
+  height: 100vh;
+  color: #1f1f1f;
+  background: linear-gradient(to bottom, #bada55, #c0ffee);
+}
+
+.test {
+  display: flex;
+  user-select: none;
+}
+
+h1 { color: hotpink; font-family: cursive;}
+header { display:flex; justify-content:space-between; align-items:center; padding:1rem 1.5rem; border-bottom:1px solid #eee; }
+nav a { margin-left:1rem; text-decoration:none; }
+.hero { padding:3rem 1.5rem; background:#f6f8ff; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; padding:1.5rem; }
+.card {
+  display: flex;
+  & .title {
+    color: #1f1f1f;
+  }
+}
+button { padding:.6rem 1rem; border-radius:10px; border:1px solid #ccc; background:white; cursor:pointer; color: var(--main-color);}
