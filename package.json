@@ -25,5 +25,11 @@
     "postcss-preset-env": "^10.4.0",
     "posthtml-include": "^2.0.1",
     "rimraf": "^6.1.0"
+  },
+  "dependencies": {
+    "basiclightbox": "^5.0.4",
+    "lite-youtube-embed": "^0.3.3",
+    "scrollreveal": "^4.0.9",
+    "typed.js": "^2.1.0"
   }
 }

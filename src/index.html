@@ -2,31 +2,201 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Web de Viajes</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <script type="module" src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expedición Austral</title>
+    <meta name="description" content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país." />
+
+    <!-- Rendimiento fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="/node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
   </head>
+
   <body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#homepage">Saltar al contenido</a>
+
     <header>
-      <h1>Explora el UOC 🌍</h1>
+      <h1 id="title-header">Expedición Austral</h1>
       <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Destinos</a>
-        <a href="#">Contacto</a>
+        <a href="/src/index.html">Sobre mi Viaje</a>
+        <a href="/src/categoria.html">Paises</a>
+        <a href="/src/links.html">Links</a>
       </nav>
     </header>
 
-    <main id="app">
-      <section class="hero">
-        <h2>Tu próxima aventura te espera</h2>
-        <p>Ofertas a ciudades europeas y escapadas de fin de semana.</p>
-        <button id="cta">Ver destinos</button>
+    <main id="homepage">
+      <!-- Hero -->
+      <section class="hero home" role="region" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h2 id="hero-title">Del Caribe a la Tierra del Fuego, guiada por la Cruz del Sur</h2>
+          <p>Guiada por la Cruz del Sur, recorrí Sudamérica y quiero compartir contigo cada etapa de este viaje. Aquí descubrirás mis experiencias, los altibajos del camino y recomendaciones prácticas, todo organizado por países para que puedas seguir mis pasos o crear tu propia ruta.</p>
+          <a class="btn btn--light" href="/src/categoria.html">Empieza tu viaje país por país</a>
+        </div>
       </section>
 
-      <section class="grid" id="destinos"></section>
+      <!-- Sobre mí -->
+      <section class="container_content container right" aria-labelledby="about-title">
+        <div class="content__figure">
+          <figure class="figure">
+            <img
+              src="images/Lorena_martinez_salar_de_uyuni-800.jpg"
+              srcset="
+                images/Lorena_martinez_salar_de_uyuni-800.jpg  800w,
+                images/Lorena_martinez_salar_de_uyuni-1200.jpg 1200w,
+                images/Lorena_martinez_salar_de_uyuni-1600.jpg 1600w"
+               data-lightbox="
+                images/Lorena_martinez_salar_de_uyuni-800.jpg  800w,
+                images/Lorena_martinez_salar_de_uyuni-1200.jpg 1200w,
+                images/Lorena_martinez_salar_de_uyuni-1600.jpg 1600w"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 44vw, 520px"
+              alt="Lorena Martínez en el Salar de Uyuni"
+              width="800" height="1000" loading="lazy" decoding="async"
+            />
+            <figcaption class="visually-hidden">Retrato de la autora encima de un coche en el salar de Uyuni</figcaption>
+          </figure>
+        </div>
+
+        <div class="content__content">
+          <h2 id="about-title" class="content__title">Sobre mi</h2>
+          <p class="content__text">Hola, soy Lore, una viajera curiosa y amante de los paisajes del sur.
+Durante meses recorrí Sudamérica, desde las playas del Caribe hasta los confines de la Tierra del Fuego. En este blog quiero compartir no solo los lugares que conocí, sino también lo que aprendí en el camino: los retos, las alegrías y las personas que dejaron huella.</p>
+          <p><strong>Mi objetivo:</strong> inspirarte a viajar de una forma más consciente, conectando con las comunidades locales y disfrutando cada paso del trayecto.</p>
+          <a class="btn btn--dark external" href="https://www.linkedin.com/in/lorenamartinezmisstrack/" target="_blank" rel="noopener">Contáctame en LinkedIn</a>
+        </div>
+      </section>
+
+ <!-- Lite YouTube -->
+<section aria-labelledby="video-title">
+  <h2 id="video-title">Vídeo: Ruta por el altiplano</h2>
+
+ 
+  <lite-youtube
+    videoid="dQw4w9WgXcQ"
+    style="max-width: 720px; aspect-ratio: 16 / 9; width: 100%;"
+    title="Ruta por el altiplano (YouTube)"
+  >
+    <!-- Texto accesible para lectores de pantalla -->
+    <span class="visually-hidden">Video de YouTube: Ruta por el altiplano</span>
+  </lite-youtube>
+
+  <!-- Fallback si JS está desactivado -->
+  <noscript>
+    <p>
+      Mira el vídeo en 
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noopener">YouTube</a>.
+    </p>
+  </noscript>
+</section>
+ <!-- final YouTube -->
+      <!-- Grid rincones -->
+      <section class="grid_rincones" aria-labelledby="rincones-heading">
+        <div class="container">
+          <div class="title">
+            <h2 id="rincones-heading">Los rincones</h2>
+          </div>
+
+          <ul class="grid" role="list" aria-label="Galería de rincones">
+            <!-- Colombia -->
+            <li>
+              <a class="card card__link" href="/src/det1.html" aria-labelledby="card-colombia-title">
+                <figure class="card__media">
+                  <img src="images/colombia-thumb.jpg" alt="Caballos bebiendo en un riachuelo del Parque Tayrona" width="450" height="450" loading="lazy" decoding="async" />
+                  <figcaption class="visually-hidden">Paisaje de Colombia</figcaption>
+                </figure>
+                <h3 id="card-colombia-title">Colombia</h3>
+                <p>Entre montañas cubiertas de cafetales y los coloridos muros de Guatapé, descubrí un país lleno de aroma, sabor y energía. Escalar sus rocas fue tocar el pulso vibrante de su naturaleza.</p>
+                <span class="card__cta" aria-hidden="true">Descubre más de Colombia</span>
+              </a>
+            </li>
+
+            <!-- Brasil -->
+            <li>
+              <a class=" card card__link" href="#" aria-labelledby="card-brasil-title">
+                <figure class="card__media">
+                  <img src="images/brasil-thumb.jpg" alt="Atardecer sobre un río en Amazonas" width="450" height="450" loading="lazy" decoding="async" />
+                  <figcaption class="visually-hidden">Amazonas, Brasil</figcaption>
+                </figure>
+                <h3 id="card-brasil-title">Brasil</h3>
+                <p>El Amazonas parece no tener fin, un océano verde que respira vida. Entre ríos y comunidades indígenas, comprendí la grandeza y el respeto que la selva inspira.</p>
+                <span class="card__cta" aria-hidden="true">Descubre más de Brasil</span>
+              </a>
+            </li>
+
+            <!-- Argentina -->
+            <li>
+              <a class="card card__link" href="#" aria-labelledby="card-argentina-title">
+                <figure class="card__media">
+                  <img src="images/argentina-thumb.jpg" alt="Glaciar Perito Moreno con una visitante en primer plano" width="450" height="450" loading="lazy" decoding="async" />
+                  <figcaption class="visually-hidden">Perito Moreno, Argentina</figcaption>
+                </figure>
+                <h3 id="card-argentina-title">Argentina</h3>
+                <p>El tango, las terrazas compartidas y los ñoquis del 29 me regalaron una nueva familia. En Buenos Aires, cada encuentro fue una historia y cada despedida, una promesa.</p>
+                <span class="card__cta" aria-hidden="true">Descubre más de Argentina</span>
+              </a>
+            </li>
+
+            <!-- Chile -->
+            <li>
+              <a class="card card__link" href="/src/det2.html" aria-labelledby="card-chile-title">
+                <figure class="card__media">
+                  <img src="images/chile-thumb.jpg" alt="Cordillera de los Andes y desierto de Atacama con llamas" width="450" height="450" loading="lazy" decoding="async" />
+                  <figcaption class="visually-hidden">Paisajes de Chile</figcaption>
+                </figure>
+                <h3 id="card-chile-title">Chile</h3>
+                <p>De la inmensidad blanca de la Patagonia al silencio dorado del desierto de Atacama, Chile se siente como un sueño entre extremos. Un país que enseña humildad ante la naturaleza.</p>
+                <span class="card__cta" aria-hidden="true">Descubre más de Chile</span>
+              </a>
+            </li>
+
+            <!-- Bolivia -->
+            <li>
+              <a class=" card card__link" href="#" aria-labelledby="card-bolivia-title">
+                <figure class="card__media">
+                  <img src="images/bolivia-thumb.jpg" alt="Vista de El Alto en La Paz" width="450" height="450" loading="lazy" decoding="async" />
+                  <figcaption class="visually-hidden">El Alto, Bolivia</figcaption>
+                </figure>
+                <h3 id="card-bolivia-title">Bolivia</h3>
+                <p>Su español claro y melodioso me acompañó por Potosí, la Death Road y el Salar de Uyuni. Bolivia me enseñó que el corazón del altiplano late con fuerza y autenticidad.</p>
+                <span class="card__cta" aria-hidden="true">Descubre más de Bolivia</span>
+              </a>
+            </li>
+
+            <!-- Paraguay -->
+            <li>
+              <a class="card card__link" href="#" aria-labelledby="card-paraguay-title">
+                <figure class="card__media">
+                  <img src="images/paraguay-thumb.jpg" alt="Carretera estrecha entre bosque" width="450" height="450" loading="lazy" decoding="async" />
+                  <figcaption class="visually-hidden">Carretera en Paraguay</figcaption>
+                </figure>
+                <h3 id="card-paraguay-title">Paraguay</h3>
+                <p>En el corazón del continente, Paraguay guarda una calma que se siente en sus ríos y en la voz de su gente. Entre el Guaraní y el mate compartido, descubrí la belleza de lo simple.</p>
+                <span class="card__cta" aria-hidden="true">Descubre más de Paraguay</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <script src="./index.js"></script>
+    <footer class="site-footer">
+      <div class="container footer__content">
+        <div class="footer__brand">
+          <p class="footer__title">Expedición Austral</p>
+          <p class="footer__tagline">Un viaje por Sudamérica guiado por la Cruz del Sur.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Enlaces del pie de página">
+          <ul class="footer__list">
+            <li><a href="#homepage">Sobre mí</a></li>
+            <li><a href="/src/categoria.html">Países</a></li>
+            <li><a href="https://www.linkedin.com/in/lorenamartinezmisstrack/">Contacto</a></li>
+            <li><a href="/src/links.html">Links</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
