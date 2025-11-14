@@ -120,7 +120,7 @@ nav a:hover { text-decoration: underline; }
 
 /* ========= Hero ========= */
 .hero {
-  background: url("/src/Images/Background_plants.jpg") center/cover no-repeat;
+  background: url("./Images/Background_plants.jpg") center/cover no-repeat;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
