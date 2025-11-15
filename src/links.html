@@ -1,40 +1,100 @@
 <!doctype html>
 <html lang="es">
-<!doctype html>
-<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Expedición Austral</title>
-    <meta name="description" content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país." />
 
-    <!-- Rendimiento fuentes -->
+    <title>Expedición Austral</title>
+    <meta
+      name="description"
+      content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país."
+    />
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">  
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="index.js"></script>
+
+    <!-- JS -->
+    <script type="module" src="./index.js"></script>
   </head>
-  <body>
-    <header>
-      <h1>Explora el UOC 🌍</h1>
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Destinos</a>
-        <a href="#">Contacto</a>
-      </nav>
-    </header>
 
-    <main id="app">
-      <section class="hero">
-        <h2>Tu próxima aventura te espera</h2>
-        <p>Ofertas a ciudades europeas y escapadas de fin de semana.</p>
-        <button id="cta">Ver destinos</button>
-      </section>
+<body>
+  <!-- Skip link -->
+  <a class="skip-link" href="#links">Saltar al contenido</a>
 
-      <section class="grid" id="destinos"></section>
-    </main>
+  <include src="./Componentes/header.html"></include>
 
-    <script src="./index.js"></script>
-  </body>
+  <main id="links">
+
+    <!-- Hero -->
+    <section
+      class="hero secondary categoria"
+      role="region"
+      aria-labelledby="hero-title">
+      <div class="hero__content">
+        <h2 id="hero-title">Links</h2>
+      </div>
+    </section>
+
+    <!-- Texto -->
+    <section class="container">
+      <div class="content__content">
+        <h2 id="links-title">Enlaces y atribuciones</h2>
+        <p>
+          En esta página se recogen todas las fuentes utilizadas para el desarrollo de este sitio web, incluyendo imágenes, vídeos, recursos externos y atribuciones de derechos cuando es necesario.
+        </p>
+      </div>
+    </section>
+
+    <!-- Imágenes -->
+    <section class="container">
+      <div class="content__content">
+        <h2>Imágenes</h2>
+        <p>
+          Fotografías del viaje: <strong>autoría propia (Lorena Martínez)</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vídeos -->
+    <section class="container">
+      <div class="content__content">
+        <h2>Vídeos</h2>
+        <p>
+          <strong>"Ruta por el altiplano"</strong>, vídeo incrustado desde YouTube.<br />
+          Fuente:
+          <a href="https://www.youtube.com/watch?v=yWq2IFjkaWg" target="_blank" rel="noopener">
+            https://www.youtube.com/watch?v=yWq2IFjkaWg
+          </a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- IA generativa -->
+    <section class="container">
+      <div class="content__content">
+        <h2>Uso de herramientas de IA generativas</h2>
+        <p>
+          Se ha utilizado <strong>ChatGPT</strong> únicamente para asistencia en redacción, revisión ortotipográfica y organización del contenido textual.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <include src="./Componentes/footer.html"></include>
+</body>
+
+  
 </html>

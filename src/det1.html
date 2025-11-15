@@ -3,36 +3,113 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Expedición Austral</title>
-    <meta name="description" content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país." />
 
-    <!-- Rendimiento fuentes -->
+    <title>Expedición Austral</title>
+    <meta
+      name="description"
+      content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país."
+    />
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="index.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Explora el UOC 🌍</h1>
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Destinos</a>
-        <a href="#">Contacto</a>
-      </nav>
-    </header>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <main id="app">
-      <section class="hero">
-        <h2>Tu próxima aventura te espera</h2>
-        <p>Ofertas a ciudades europeas y escapadas de fin de semana.</p>
-        <button id="cta">Ver destinos</button>
+    <!-- Estilos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JS -->
+    <script type="module" src="./index.js"></script>
+  </head>
+
+  <body>
+      <!-- Skip link -->
+    <a class="skip-link" href="#homepage">Saltar al contenido</a>
+<include src="./Componentes/header.html"></include>
+    <main id="Colombia">
+     <section class="hero secondary colombia"  aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h2 id="hero-title">Colombia</h2>
+        </div>
       </section>
 
-      <section class="grid" id="destinos"></section>
-    </main>
+   <!-- Izquierda -->
+      <section class="container_content container right" aria-labelledby="bogota-title">
+        <div class="content__figure">
+         <figure class="figure">
+            <img
+              src="images/colombia-1.jpg"
+              srcset="
+              images/colombia-1.jpg 800w
+              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              alt="Vista de Monserrate en Bogotá, con el camino empedrado lleno de visitantes, casas coloniales y neblina cubriendo los cerros orientales"
+              width="800" height="1000" loading="lazy" decoding="async"
+            />
+            <figcaption class="visually-hidden">Subida a Monserrate entre neblina y cerros, un mirador donde Bogotá se extiende debajo como una ciudad infinita que respira entre nubes.</figcaption>
+          </figure>
+        </div>
 
-    <script src="./index.js"></script>
+        <div class="content__content">
+          <h2 id="bogota-title">Bogotá desde las alturas</h2>
+          <p>Bogotá me recibió a más de 2.600 metros de altura, con un clima impredecible que cambia en cuestión de minutos y con días que parecen más cortos por la constante neblina que cubre la ciudad. Subir a Monserrate, a más de 3.100 metros, fue una mezcla de sorpresa y esfuerzo: el aire se vuelve más ligero, la vista se abre hacia una ciudad enorme y desordenada, y el contraste entre el bullicio urbano y la tranquilidad de la cima resulta increíble. Entendí por qué miles de personas suben a diario: para pedir algo, agradecer, entrenar, desconectar o simplemente mirar Bogotá desde otro ángulo.</p>         
+        </div>
+      </section>
+
+
+     <!-- Derecha -->
+      <section class="container_content container left" aria-labelledby="antioquia-title">
+        <div class="content__figure">
+         <figure class="figure">
+            <img
+              src="images/colombia-2.jpg"
+              srcset="
+              images/colombia-2.jpg 800w
+              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              alt="Gran cascada rodeada de vegetación en la región de Antioquia, con una persona bañándose al pie del agua"
+              width="800" height="1000" loading="lazy" decoding="async"
+            />
+            <figcaption class="visually-hidden">Cascada escondida en la región de Antioquia, un rincón donde el ruido del agua y la selva húmeda hacen que el tiempo parezca detenerse.</figcaption>
+          </figure>
+        </div>
+
+        <div class="content__content">
+          <h2 id="antioquia-title">La magia natural de Antioquia</h2>
+          <p>En el corazón de Antioquia, es un lugar donde la naturaleza parece no agotarse nunca. Cascadas escondidas entre montañas húmedas, ríos transparentes, cañones verdes y senderos que conectan veredas llenas de vida hacen que cada excursión sea distinta. Es una zona donde el clima cambia rápido, donde la vegetación lo cubre todo y donde cada paisaje parece una invitación a quedarse un poco más.</p>
+          
+        </div>
+      </section>
+
+         <!-- Izquierda -->
+      <section class="container_content container right" aria-labelledby="kenedy-title">
+        <div class="content__figure">
+         <figure class="figure">
+            <img
+              src="images/colombia-3.jpg"
+              srcset="
+              images/colombia-3.jpg 800w
+              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              alt="Lendero húmedo en el ascenso al Pico Kennedy, con una caminante y un perro guía avanzando entre vegetación y neblina"
+              width="800" height="1000" loading="lazy" decoding="async"
+            />
+            <figcaption class="visually-hidden">Sendero húmedo rumbo al Cerro Kennedy, acompañado por los perros locales que conocen cada curva del bosque nublado mejor que nadie.</figcaption>
+          </figure>
+        </div>
+
+        <div class="content__content">
+          <h2 id="kenedy-title">Camino hacia el Pico Kennedy</h2>
+          <p>La subida al Cerro Kennedy atraviesa un bosque húmedo cubierto de neblina, donde el camino serpentea entre helechos gigantes y ramas llenas de musgo, acompañado a veces por perros locales que conocen la ruta mejor que cualquiera. A medida que se gana altura, el paisaje se abre y, si el clima lo permite, se alcanza a ver el mar Caribe a un lado y, al frente, los picos Bolívar y Colón, los nevados principales de la Sierra Nevada de Santa Marta. En la cima, además del frío y el silencio de la montaña, es habitual encontrar presencia militar, ya que el lugar se utiliza como punto de vigilancia. Es una caminata exigente, pero de esas que regalan una mezcla de selva, altura y vistas que difícilmente se olvidan.</p>
+          
+        </div>
+      </section>
+
+    </main>
+<include src="./Componentes/footer.html"></include>
   </body>
 </html>

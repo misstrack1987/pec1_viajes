@@ -3,37 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Expedición Austral</title>
-    <meta name="description" content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país." />
 
-    <!-- Rendimiento fuentes -->
+    <title>Expedición Austral</title>
+    <meta
+      name="description"
+      content="Viaje por Sudamérica: experiencias, rutas y recomendaciones país por país."
+    />
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">  
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.css"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="index.js"></script>
+
+    <!-- JS -->
+    <script type="module" src="./index.js"></script>
   </head>
-  <body>
-    <header>
-      <h1>Explora el UOC 🌍</h1>
-      <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Destinos</a>
-        <a href="#">Contacto</a>
-      </nav>
-    </header>
 
-    <main id="app">
-      <section class="hero">
-        <h2>Tu próxima aventura te espera</h2>
-        <p>Ofertas a ciudades europeas y escapadas de fin de semana.</p>
-        <button id="cta">Ver destinos</button>
-      </section>
 
-      <section class="grid" id="destinos"></section>
-    </main>
 
-    <script src="./index.js"></script>
-    <!--#include file="components/footer.html" -->
-  </body>
+<body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#homepage">Saltar al contenido</a>
+  <include src="./Componentes/header.html"></include>
+
+  <main id="paises">
+
+    <!-- Hero -->
+    <section
+      class="hero secondary categoria"
+      role="region"
+      aria-labelledby="hero-title"
+    >
+      <div class="hero__content">
+        <h2 id="hero-title">Los países que marcaron mi ruta</h2>
+      </div>
+    </section>
+
+    <!-- Rincones -->
+    <section>
+      <include src="./Componentes/rincones.html"></include>
+    </section>
+
+  </main>
+
+  <include src="./Componentes/footer.html"></include>
+</body>
+
+
 </html>
