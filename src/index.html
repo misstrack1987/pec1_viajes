@@ -18,6 +18,9 @@
       rel="stylesheet"
     />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/16x16-icon-45597.png">
+
     <!-- Estilos -->
     <link
       rel="stylesheet"
@@ -35,7 +38,6 @@
     <a class="skip-link" href="#home">Saltar al contenido</a>
     <include src="./Componentes/header.html"></include>
     <main id="home">
-
       <!-- Hero -->
       <section class="hero home" aria-labelledby="hero-title">
         <div class="hero__content">
@@ -43,6 +45,12 @@
           <p>Guiada por la Cruz del Sur, recorrí Sudamérica y quiero compartir contigo cada etapa de este viaje. Aquí descubrirás mis experiencias, los altibajos del camino y recomendaciones prácticas, todo organizado por países para que puedas seguir mis pasos o crear tu propia ruta.</p>
           <a class="btn btn--light" href="/src/categoria.html">Empieza tu viaje país por país</a>
         </div>
+
+  <!-- SVG decorativo (portada) -->
+<svg class="arrows">
+              <path stroke-linecap="round" class="a1" d="M0 0 L20 22 L40 0"></path>
+            </svg>
+
       </section>
 
       <!-- Sobre mí -->
@@ -50,10 +58,15 @@
         <div class="content__figure">
           <figure class="figure">
             <img
-              src="images/Lorena_martinez_salar_de_uyuni-800.jpg"
+              src="images/Lorena_martinez_salar_de_uyuni-800.webp"
               srcset="
-              images/Lorena_martinez_salar_de_uyuni-800.jpg 800w"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+                images/Lorena_martinez_salar_de_uyuni-400.webp 400w,
+                images/Lorena_martinez_salar_de_uyuni-800.webp 800w,
+                images/Lorena_martinez_salar_de_uyuni-1200.webp 1200w
+                "
+              sizes="(max-width: 768px) 100vw, 
+                      (max-width: 1200px) 80vw, 800px"
+
               alt="Lorena Martínez en el Salar de Uyuni"
               width="800" height="1000" loading="lazy" decoding="async"
             />
@@ -70,8 +83,10 @@ Durante meses recorrí Sudamérica, desde las playas del Caribe hasta los confin
         </div>
       </section>
 
+
       <!-- Lite YouTube -->
       <section class="container video" aria-labelledby="video-title">
+
           <div class="content__content">
         <h2 id="video-title">El alto desde arriba</h2>
 <p>El Alto visto desde arriba revela otra perspectiva del altiplano: barrios que trepan las laderas, teleféricos que cruzan el cielo y un paisaje que mezcla vértigo y vida cotidiana. Un instante suspendido en la altura boliviana donde la ciudad, la montaña y el viento se encuentran.</p>

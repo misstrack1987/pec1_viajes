@@ -18,6 +18,9 @@
       rel="stylesheet"
     />
 
+ <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/16x16-icon-45597.png">
+
     <!-- Estilos -->
     <link
       rel="stylesheet"
@@ -36,7 +39,42 @@
 <include src="./Componentes/header.html"></include>
 
     <main id="chile">
-           <section class="hero secondary chile" role="region" aria-labelledby="hero-title">
+           <section class="hero secondary" role="region" aria-labelledby="hero-title">
+
+<picture class="hero__img">
+  <!-- Versión vertical para móviles -->
+  <source
+    media="(max-width: 768px)"
+    srcset="
+      ./images/Banner-Chile-vertical-400.webp 400w,
+      ./images/Banner-Chile-vertical-800.webp 800w,
+      ./images/Banner-Chile-vertical-1200.webp 1200w
+    "
+    sizes="100vw"
+  />
+
+  <!-- Versión horizontal para pantallas grandes -->
+  <source
+    media="(min-width: 769px)"
+    srcset="
+      ./images/Banner-Chile-400.webp 400w,
+      ./images/Banner-Chile-800.webp 800w,
+      ./images/Banner-Chile-1200.webp 1200w
+    "
+    sizes="100vw"
+  />
+
+  <!-- Fallback -->
+  <img
+    src="./images/Banner-Chile-800.webp"
+    alt="Paisaje de Chile utilizado como imagen destacada"
+    loading="lazy"
+    decoding="async"
+  />
+</picture>
+
+
+
         <div class="hero__content">
           <h2 id="hero-title">Chile</h2>
         </div>
@@ -47,10 +85,15 @@
         <div class="content__figure">
          <figure class="figure">
             <img
-              src="images/chile-1.jpg"
-              srcset="
-              images/chile-1.jpg 800w
-              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              src="./images/chile-1-400.webp"
+  srcset="
+    ./images/chile-1-400.webp 400w,
+    ./images/chile-1-800.webp 800w,
+    ./images/chile-1-1200.webp 1200w
+  "
+  sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 80vw,
+         800px"
               alt="Persona sentada junto a la laguna al pie de las Torres del Paine, con montañas nevadas y formaciones rocosas en la Patagonia chilena"
               width="800" height="1000" loading="lazy" decoding="async"
             />
@@ -70,10 +113,15 @@
         <div class="content__figure">
          <figure class="figure">
             <img
-              src="images/chile-2.jpg"
-              srcset="
-              images/chile-2.jpg 800w
-              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+  src="./images/chile-2-400.webp"
+  srcset="
+    ./images/chile-2-400.webp 400w,
+    ./images/chile-2-800.webp 800w,
+    ./images/chile-2-1200.webp 1200w
+  "
+  sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 80vw,
+         800px"
               alt="Flamencos andinos alimentándose en una laguna del desierto de Atacama, rodeada de vegetación baja y suelos minerales"
               width="800" height="1000" loading="lazy" decoding="async"
             />
@@ -93,10 +141,15 @@
         <div class="content__figure">
         <figure class="figure">
             <img
-              src="images/chile-3.jpg"
-              srcset="
-              images/chile-3.jpg 800w
-              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+  src="./images/chile-3-400.webp"
+  srcset="
+    ./images/chile-3-400.webp 400w,
+    ./images/chile-3-800.webp 800w,
+    ./images/chile-3-1200.webp 1200w
+  "
+  sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 80vw,
+         800px"
               alt="Glaciar colgante entre montañas cubiertas de nubes en la Patagonia chilena, con hielo fracturado y una morrena visible en la base"
               width="800" height="1000" loading="lazy" decoding="async"
             />

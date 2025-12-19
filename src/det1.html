@@ -18,6 +18,9 @@
       rel="stylesheet"
     />
 
+     <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/16x16-icon-45597.png">
+
     <!-- Estilos -->
     <link
       rel="stylesheet"
@@ -34,7 +37,40 @@
     <a class="skip-link" href="#det1">Saltar al contenido</a>
 <include src="./Componentes/header.html"></include>
     <main id="Colombia">
-     <section class="hero secondary colombia"  aria-labelledby="hero-title">
+    <section class="hero secondary" style="background-color:red;"  aria-labelledby="hero-title">
+
+<picture class="hero__img">
+  <!-- Versión vertical para móvil -->
+  <source
+    media="(max-width: 768px)"
+    srcset="
+      ./images/Banner-Colombia-vertical-400.webp 400w,
+      ./images/Banner-Colombia-vertical-800.webp 800w,
+      ./images/Banner-Colombia-vertical-1200.webp 1200w
+    "
+    sizes="100vw"
+  />
+
+  <!-- Versión horizontal panorámica para escritorio -->
+  <source
+    media="(min-width: 769px)"
+    srcset="
+      ./images/Banner-Colombia-400.webp 400w,
+      ./images/Banner-Colombia-800.webp 800w,
+      ./images/Banner-Colombia-1200.webp 1200w
+    "
+    sizes="100vw"
+  />
+
+  <!-- Fallback -->
+  <img
+    src="./images/Banner-Colombia-800.webp"
+    alt="Paisaje de Colombia utilizado como imagen destacada"
+    loading="lazy"
+    decoding="async"
+  />
+</picture>
+
         <div class="hero__content">
           <h2 id="hero-title">Colombia</h2>
         </div>
@@ -45,10 +81,16 @@
         <div class="content__figure">
          <figure class="figure">
             <img
-              src="images/colombia-1.jpg"
+              src="images/colombia-1-400.webp"
               srcset="
-              images/colombia-1.jpg 800w
-              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              images/colombia-1-400.webp 400w,
+              images/colombia-1-800.webp 800w,
+              images/colombia-1-1200.webp 1200w,
+
+              "sizes="
+              (max-width: 768px) 100vw, 
+              (max-width: 1200px) 80vw, 800px"
+
               alt="Vista de Monserrate en Bogotá, con el camino empedrado lleno de visitantes, casas coloniales y neblina cubriendo los cerros orientales"
               width="800" height="1000" loading="lazy" decoding="async"
             />
@@ -68,10 +110,15 @@
         <div class="content__figure">
          <figure class="figure">
             <img
-              src="images/colombia-2.jpg"
+               src="images/colombia-2-400.webp"
               srcset="
-              images/colombia-2.jpg 800w
-              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              images/colombia-2-400.webp 400w,
+              images/colombia-2-800.webp 800w,
+              images/colombia-2-1200.webp 1200w,
+              
+              "sizes="
+              (max-width: 768px) 100vw, 
+              (max-width: 1200px) 80vw, 800px"
               alt="Gran cascada rodeada de vegetación en la región de Antioquia, con una persona bañándose al pie del agua"
               width="800" height="1000" loading="lazy" decoding="async"
             />
@@ -91,10 +138,15 @@
         <div class="content__figure">
          <figure class="figure">
             <img
-              src="images/colombia-3.jpg"
+               src="images/colombia-3-400.webp"
               srcset="
-              images/colombia-3.jpg 800w
-              "sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+              images/colombia-3-400.webp 400w,
+              images/colombia-3-800.webp 800w,
+              images/colombia-3-1200.webp 1200w,
+              
+              "sizes="
+              (max-width: 768px) 100vw, 
+              (max-width: 1200px) 80vw, 800px"
               alt="Lendero húmedo en el ascenso al Pico Kennedy, con una caminante y un perro guía avanzando entre vegetación y neblina"
               width="800" height="1000" loading="lazy" decoding="async"
             />

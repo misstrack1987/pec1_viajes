@@ -102,6 +102,42 @@ h5 { font-size: clamp(1.3rem, 2vw + 0.3rem, 1.6rem); }
   color: white;
 }
 
+/* ========= SVG ========= */
+.arrows {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #ffffff;
+  fill: transparent;
+  stroke-width: 3px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0; transform:translateY(10px)}
+80% {opacity:1; transform:translateY(50px)}
+100% {opacity:0; transform:translateY(50px)}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0; transform:translateY(10px)}
+80% {opacity:1; transform:translateY(50px)}
+100% {opacity:0; transform:translateY(50px)}
+}
+
+.arrows path.a1 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari and Chrome */
+}
 /* ========= Header fijo ========= */
 header {
   position: fixed;
@@ -150,18 +186,55 @@ nav a:hover {
   flex-direction: column; 
   justify-content: center; 
   align-items: center;
+  overflow: hidden;
+  position: relative;
+
 }
 
-.home { 
-  height: 100vh; 
-  background: url("./images/Background_plants.jpg") center/cover no-repeat;
+
+
+
+.home {
+  /* Fallback universal */
+    height: 100vh; 
+  background-image: url("./images/Background_plants-large-800.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Mejora progresiva (Safari / Chrome) */
+  background-image: -webkit-image-set(
+    url("./images/Background_plants-large-800.webp") 1x,
+    url("./images/Background_plants-large-1200.webp") 2x
+  );
+
+  /* Mejora progresiva (estándar) */
+  background-image: image-set(
+    url("./images/Background_plants-large-800.webp") 1x,
+    url("./images/Background_plants-large-1200.webp") 2x
+  );
 }
+
 
 .secondary {
   height: clamp(12rem, 40vh, 25rem);
 }
 
+@keyframes appearUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .hero__content {
+  position: relative;
+  z-index: 2;      
   text-align: center;
   max-width: 85ch;
   padding-inline: clamp(1rem, 4vw, 2rem);
@@ -172,22 +245,61 @@ nav a:hover {
   color: var(--text-light);
 }
 
-.colombia {
-  background: url("./images/Banner-Colombia.jpg") center/cover no-repeat;
+.hero__content > * { /* todos los hijos directos (> *) dentro de .hero__content tengan la animación.*/
+  opacity: 0;
+  animation: appearUp 1s ease-out forwards;
 }
 
-.chile {
-  background: url("./images/Banner-Chile.jpg") center/cover no-repeat;
+.hero__content > *:nth-child(1) {
+  animation-delay: 0.1s;
 }
+
+.hero__content > *:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.hero__content > *:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+
+.hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: 0;    
+}
+
+.hero__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.1);
+  animation: slowZoom 5s ease-out forwards;
+}
+
+@keyframes slowZoom {
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .categoria {
-  background: url("./images/Background_plants.jpg") center/cover no-repeat;
+   background-image: image-set(
+    url("./images/Background_plants-large-800.webp") 1x,
+    url("./images/Background_plants-large-1200.webp") 2x
+  );
+  background-size: cover;
+  background-position: center;
 }
+
 
 /* ========= Módulo 1 ========= */
 .container {
   max-width: var(--maxw);
-  min-width: 70rem;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
@@ -343,6 +455,12 @@ nav a:hover {
   transition: transform 0.4s, box-shadow 0.4s;
 }
 
+.card:hover,
+.card:focus-within {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
 .card__media { 
   border-radius: var(--radius); 
   overflow: hidden; 
@@ -381,6 +499,14 @@ nav a:hover {
   background: var(--color-dark);
   color: var(--color-light);
   padding-block: var(--pad-footer-top) var(--pad-footer-bottom);
+clip-path: polygon(0% 0%, 100% 50%, 100% 100%, 0 100%);
+
+}
+
+@media (max-width: 768px) {
+  .site-footer{
+    clip-path: polygon(0% 0%, 500% 50%, 100% 100%, 0 100%);
+  }
 }
 
 .footer__content {
