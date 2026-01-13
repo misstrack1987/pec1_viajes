@@ -1,5 +1,4 @@
 // src/index.js
-import 'lite-youtube-embed/src/lite-yt-embed.js';
 
 // tu código para el header:
 window.addEventListener('scroll', () => {
@@ -13,3 +12,16 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Lazy-load del script del vídeo (carga asíncrona)
+const video = document.querySelector("lite-youtube");
+
+if (video) {
+  const obs = new IntersectionObserver(async ([entry]) => {
+    if (entry.isIntersecting) {
+      obs.disconnect();
+      await import("./video.js"); // carga asíncrona real
+    }
+  }, { rootMargin: "200px" });
+
+  obs.observe(video);
+}
